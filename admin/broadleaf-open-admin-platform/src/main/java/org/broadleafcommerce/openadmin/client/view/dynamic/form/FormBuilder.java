@@ -142,8 +142,8 @@ public class FormBuilder {
 
         //make the grid readonly if it fails a security check
         if (metadata.getSecurityLevel() != null && !"".equals(metadata.getSecurityLevel())){
-            org.broadleafcommerce.openadmin.client.security.SecurityManager.getInstance().registerField(String.valueOf(metadata.hashCode()), metadata.getSecurityLevel());
-            Boolean shouldLoad = org.broadleafcommerce.openadmin.client.security.SecurityManager.getInstance().isUserAuthorizedToEditField(String.valueOf(metadata.hashCode()));
+            SecurityManager.getInstance().registerField(String.valueOf(metadata.hashCode()), metadata.getSecurityLevel());
+            Boolean shouldLoad = SecurityManager.getInstance().isUserAuthorizedToEditField(String.valueOf(metadata.hashCode()));
             if (!shouldLoad) {
                 metadata.setMutable(false);
             }

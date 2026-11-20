@@ -35,7 +35,7 @@ public class SecurityExceptionFactory {
         } else if (springException instanceof AuthenticationException) {
             gwtException = new com.gwtincubator.security.exception.AuthenticationException(springException.getMessage(), springException);
         } else {
-            gwtException = new com.gwtincubator.security.exception.ApplicationSecurityException(springException.getMessage(), springException);
+            gwtException = new ApplicationSecurityException(springException.getMessage(), springException);
         }
         return gwtException;
     }

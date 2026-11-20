@@ -31,7 +31,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@javax.persistence.Entity
+import javax.persistence.Entity;
+
+@Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name="BLC_SANDBOX_ITEM")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region="blSandBoxElements")

@@ -38,6 +38,8 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 
+import java.io.Serializable;
+
 
 /**
  * @author priyeshpatel
@@ -47,7 +49,7 @@ import javax.persistence.TableGenerator;
 @Table(name = "BLC_URL_HANDLER")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "blStandardElements")
 @AdminPresentationClass(populateToOneFields = PopulateToOneFieldsEnum.TRUE, friendlyName = "URLHandlerImpl_friendyName")
-public class URLHandlerImpl implements URLHandler, java.io.Serializable {
+public class URLHandlerImpl implements URLHandler, Serializable {
 
     private static final long serialVersionUID = 1L;
 

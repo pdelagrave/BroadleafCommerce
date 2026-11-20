@@ -21,6 +21,8 @@ package org.broadleafcommerce.cms.url.domain;
 
 import org.broadleafcommerce.cms.url.type.URLRedirectType;
 
+import java.io.Serializable;
+
 
 /**
  * A Null instance of a URLHandler.   Used by the default URLHandlerServiceImpl implementation to 
@@ -28,7 +30,7 @@ import org.broadleafcommerce.cms.url.type.URLRedirectType;
  * 
  * @author bpolster
  */
-public class NullURLHandler implements URLHandler,java.io.Serializable {
+public class NullURLHandler implements URLHandler,Serializable {
      private static final long serialVersionUID = 1L;
 
     @Override

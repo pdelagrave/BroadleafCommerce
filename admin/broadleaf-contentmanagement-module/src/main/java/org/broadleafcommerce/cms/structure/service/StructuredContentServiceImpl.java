@@ -482,7 +482,7 @@ public class StructuredContentServiceImpl extends AbstractContentService impleme
     }
 
     @Override
-    public List<StructuredContentDTO> lookupStructuredContentItemsByName(SandBox sandBox, StructuredContentType contentType, String contentName, org.broadleafcommerce.common.locale.domain.Locale locale, Integer count, Map<String, Object> ruleDTOs, boolean secure) {
+    public List<StructuredContentDTO> lookupStructuredContentItemsByName(SandBox sandBox, StructuredContentType contentType, String contentName, Locale locale, Integer count, Map<String, Object> ruleDTOs, boolean secure) {
         List<StructuredContent> sandBoxContentList = null;
         Locale languageOnlyLocale = findLanguageOnlyLocale(locale);
         
@@ -509,7 +509,7 @@ public class StructuredContentServiceImpl extends AbstractContentService impleme
     }
 
     @Override
-    public List<StructuredContentDTO> lookupStructuredContentItemsByName(SandBox sandBox, String contentName, org.broadleafcommerce.common.locale.domain.Locale locale, Integer count, Map<String, Object> ruleDTOs, boolean secure) {
+    public List<StructuredContentDTO> lookupStructuredContentItemsByName(SandBox sandBox, String contentName, Locale locale, Integer count, Map<String, Object> ruleDTOs, boolean secure) {
         List<StructuredContent> sandBoxContentList = null;
         Locale languageOnlyLocale = findLanguageOnlyLocale(locale);
 

@@ -41,6 +41,7 @@ import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -52,7 +53,7 @@ import java.util.Date;
 @Table(name = "BLC_SEARCH_INTERCEPT")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "blStandardElements")
 @AdminPresentationClass(populateToOneFields = PopulateToOneFieldsEnum.TRUE, friendlyName = "SearchRedirectImpl_friendyName")
-public class SearchRedirectImpl implements SearchRedirect, java.io.Serializable {
+public class SearchRedirectImpl implements SearchRedirect, Serializable {
     
     private static final long serialVersionUID = 1L;
     

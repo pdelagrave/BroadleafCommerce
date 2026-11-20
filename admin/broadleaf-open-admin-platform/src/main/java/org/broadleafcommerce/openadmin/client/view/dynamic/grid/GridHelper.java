@@ -42,8 +42,8 @@ public class GridHelper {
             }
         }
 
-        if (pane instanceof com.smartgwt.client.widgets.grid.ListGrid) {
-            ((com.smartgwt.client.widgets.grid.ListGrid) pane).setData(new ListGridRecord[] {});
+        if (pane instanceof ListGrid) {
+            ((ListGrid) pane).setData(new ListGridRecord[] {});
         }
 
         if (pane instanceof DynamicForm) {

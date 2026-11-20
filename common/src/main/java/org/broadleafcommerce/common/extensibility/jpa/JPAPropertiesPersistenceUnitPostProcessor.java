@@ -18,6 +18,7 @@ package org.broadleafcommerce.common.extensibility.jpa;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.orm.jpa.persistenceunit.MutablePersistenceUnitInfo;
+import org.springframework.orm.jpa.persistenceunit.PersistenceUnitPostProcessor;
 
 import javax.annotation.PostConstruct;
 import java.util.HashMap;
@@ -60,7 +61,7 @@ import java.util.Set;
  *    </bean>
  *
  */
-public class JPAPropertiesPersistenceUnitPostProcessor implements org.springframework.orm.jpa.persistenceunit.PersistenceUnitPostProcessor {
+public class JPAPropertiesPersistenceUnitPostProcessor implements PersistenceUnitPostProcessor {
 
     protected Map<String, String> persistenceUnitProperties = new HashMap<String, String>();
     protected Map<String, String> overrideProperties = new HashMap<String, String>();
